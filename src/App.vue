@@ -9,20 +9,20 @@
       <q-input
         filled
         v-model="name"
-        label="Your name *"
-        hint="Name and surname"
+        label="ชื่อของคุณ"
+        hint="ชื่อและนามสกุล"
         lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
+        :rules="[ val => val && val.length > 0 || 'ใส่ชื่อเล่น นามสกุล']"
       />
 
       <q-input
         filled
-        type="number"
+        type="เลข"
         v-model="age"
-        label="Your age *"
+        label="อายุ"
         lazy-rules
         :rules="[
-          val => val !== null && val !== '' || 'Please type your age',
+          val => val !== null && val !== '' || 'ใส่อายุของคุณ',
           val => val > 0 && val < 100 || 'Please type a real age'
         ]"
       />
